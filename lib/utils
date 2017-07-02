@@ -18,7 +18,7 @@ function install_node() {
   echo Downloaded node
   mkdir -p ${BUILD_DIR}/node && tar xf node.tar.xz -C ${BUILD_DIR}/node
   echo extracting into "${BUILD_DIR}/node"
-  ln -s ${BUILD_DIR}/node /app
+  ln -s ${BUILD_DIR}/node/node-v6.11.0-linux-x86/bin /app
 }
 
 
