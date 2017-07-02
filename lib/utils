@@ -16,7 +16,7 @@ function install_node() {
 
   curl -sSL -o node.tar.xz https://nodejs.org/dist/v6.11.0/node-v6.11.0-linux-x86.tar.xz
   echo Downloaded node
-  mkdir -p ${BUILD_DIR}/node && tar --strip-components 1 xf node.tar.xz -xJf -C ${BUILD_DIR}/node
+  mkdir -p ${BUILD_DIR}/node && tar xf node.tar.xz -C ${BUILD_DIR}/node
   echo extracting into "${BUILD_DIR}/node"
   #ln -s ${BUILD_DIR}/node/node-v6.11.0-linux-x86/bin /app
 }
@@ -48,6 +48,9 @@ function apt_install(){
   
   topic "Cleaning apt caches"
   apt-get $apt_options clean | indent
+
+  apt-get nodejs
+  apt-get npm
   
   topic "Updating apt caches"
   apt-get  --allow-unauthenticated $apt_options update | indent
