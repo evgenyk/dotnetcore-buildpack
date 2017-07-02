@@ -49,9 +49,6 @@ function apt_install(){
   topic "Cleaning apt caches"
   apt-get $apt_options clean | indent
 
-  apt-get nodejs
-  apt-get npm
-  
   topic "Updating apt caches"
   apt-get  --allow-unauthenticated $apt_options update | indent
 
