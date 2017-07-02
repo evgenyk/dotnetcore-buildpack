@@ -14,11 +14,11 @@ function install_dotnet() {
 function install_node() {
   local BUILD_DIR="$1"
 
-  curl -sSL -o npm.tar.gz https://nodejs.org/dist/v6.11.0/node-v6.11.0-linux-x86.tar.xz
-  echo Downloaded npm
-  mkdir -p ${BUILD_DIR}/npm && tar zxf dotnet.tar.gz -C ${BUILD_DIR}/npm
-  echo extracting into "${BUILD_DIR}/npm"
-  ln -s ${BUILD_DIR}/npm /app
+  curl -sSL -o node.tar.gz https://nodejs.org/dist/v6.11.0/node-v6.11.0-linux-x86.tar.xz
+  echo Downloaded npde
+  mkdir -p ${BUILD_DIR}/node && tar zxf node.tar.gz -C ${BUILD_DIR}/node
+  echo extracting into "${BUILD_DIR}/node"
+  ln -s ${BUILD_DIR}/node /app
 }
 
 
