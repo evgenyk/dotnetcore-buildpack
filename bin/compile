@@ -32,8 +32,8 @@ apt_install libunwind8 gettext
 echo "Installing dotnet"
 install_dotnet $BUILD_DIR 
 
-echo "Installing npm"
-install_npm $BUILD_DIR 
+echo "Installing node"
+install_node $BUILD_DIR 
 
 
 export PATH="/app/dotnet:${PATH}"
