@@ -35,6 +35,7 @@ install_dotnet $BUILD_DIR
 echo "Installing node"
 install_node $BUILD_DIR 
 
+npm install
 
 export PATH="/app/dotnet:${PATH}"
 export PATH="/app/node:${PATH}"
