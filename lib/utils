@@ -11,6 +11,17 @@ function install_dotnet() {
   ln -s ${BUILD_DIR}/dotnet /app
 }
 
+function install_node() {
+  local BUILD_DIR="$1"
+
+  curl -sSL -o npm.tar.gz https://nodejs.org/dist/v6.11.0/node-v6.11.0-linux-x86.tar.xz
+  echo Downloaded npm
+  mkdir -p ${BUILD_DIR}/npm && tar zxf dotnet.tar.gz -C ${BUILD_DIR}/npm
+  echo extracting into "${BUILD_DIR}/npm"
+  ln -s ${BUILD_DIR}/npm /app
+}
+
+
 # https://github.com/ddollar/heroku-buildpack-apt
 function topic() {
   echo "-----> $*"
