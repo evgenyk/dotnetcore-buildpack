@@ -16,7 +16,7 @@ function install_node() {
 
   curl -sSL -o node.tar.xz https://nodejs.org/dist/v6.11.0/node-v6.11.0-linux-x86.tar.xz
   echo Downloaded node
-  mkdir -p ${BUILD_DIR}/node && tar zxf node.tar.gz -C ${BUILD_DIR}/node
+  mkdir -p ${BUILD_DIR}/node && tar xf node.tar.xz -C ${BUILD_DIR}/node
   echo extracting into "${BUILD_DIR}/node"
   ln -s ${BUILD_DIR}/node /app
 }
